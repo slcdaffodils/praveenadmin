@@ -26,6 +26,7 @@ Say what the step will be
 ================Setting up====================
 
 on your root folder do
+git clone https://github.com/slcdaffodils/praveenadmin.git
 npm install
 npm start
 
