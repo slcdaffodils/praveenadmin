@@ -1,0 +1,105 @@
+  <ngb-tabset>
+  <ngb-tab title="Requests Path">
+    <ng-template ngbTabContent>
+               <div class="row">
+                  <ba-card class="col-xlg-6 col-xl-6 col-lg-12 col-sm-12 col-12"
+                            cardTitle="Request Path" baCardClass="traffic-panel medium-card">
+                   Request Path
+
+                  </ba-card>
+                                
+             
+                </div>
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab>
+    <ng-template ngbTabTitle><b>Excpetions</b></ng-template>
+    <ng-template ngbTabContent>
+    	         <div class="row">
+           		   <ba-card cardTitle="Networkflow Report" baCardClass="with-scroll table-panel">
+				      <div class="horizontal-scroll" >
+				       
+				       <table class="table table-bordered" >
+				           
+				         <thead>
+				       
+				            <tr *ngIf="dataRecieved['exceptions'][0]">
+				           
+				              <th *ngFor="let key of objectKeys(dataRecieved['exceptions'][0])" class="align-left"><b>{{key}}</b></th>
+				          
+				            </tr>
+				          </thead>
+				          <tbody>
+				            <tr *ngFor="let item of dataRecieved['exceptions']">
+				               
+				                <td style="word-wrap:break-word;" class="align-left" *ngFor="let key of objectKeys(item)">{{ item[key] }}</td>
+				               
+				              </tr>
+				               <!--tr>
+				                 <td colspan="4">
+				                 <div style="float:right">
+				                   <ngb-pagination [(collectionSize)]="dataRecieved.hits.total" [(page)]="currentPage" rotate="true" size="sm" pageSize="100" maxSize="10"></ngb-pagination>
+				                   &nbsp;
+				                   </div>
+				                 </td>
+				               </tr-->
+				            </tbody>
+				         
+				          </table>
+				        </div>
+				      </ba-card>                    
+                </div> 
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab title="Logs">
+    <ng-template ngbTabContent>
+               <div class="row">
+                  <ba-card 
+                            cardTitle="Logs" baCardClass="with-scroll table-panel">
+                      <div class="horizontal-scroll" >
+				       
+				       <table class="table table-bordered" >
+				           
+				         <thead>
+				       
+				            <tr *ngIf="dataRecieved['logs'][0]">
+				           
+				              <th *ngFor="let key of objectKeys(dataRecieved['logs'][0])" class="align-left"><b>{{key}}</b></th>
+				          
+				            </tr>
+				          </thead>
+				          <tbody>
+				            <tr *ngFor="let item of dataRecieved['logs']">
+				               
+				                <td class="align-left" *ngFor="let key of objectKeys(item)" style="word-wrap:break-word;">{{ item[key] }}</td>
+				               
+				              </tr>
+				               <!--tr>
+				                 <td colspan="4">
+				                 <div style="float:right">
+				                   <ngb-pagination [(collectionSize)]="dataRecieved.hits.total" [(page)]="currentPage" rotate="true" size="sm" pageSize="100" maxSize="10"></ngb-pagination>
+				                   &nbsp;
+				                   </div>
+				                 </td>
+				               </tr-->
+				            </tbody>
+				         
+				          </table>
+				        </div>
+                  </ba-card>
+                    
+                </div> 
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab title="Request Flow">
+    <ng-template ngbTabContent>
+      <div class="row">
+                  <ba-card class="col-xlg-6 col-xl-6 col-lg-12 col-sm-12 col-12"
+                            cardTitle="RequestFlow" baCardClass="traffic-panel medium-card">
+                            requestflow
+                  </ba-card>
+                    
+                </div>
+    </ng-template>
+  </ngb-tab>  
+</ngb-tabset>
