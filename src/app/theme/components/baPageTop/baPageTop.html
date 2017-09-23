@@ -1,6 +1,8 @@
 <div class="page-top clearfix" baScrollPosition maxHeight="50" (scrollChange)="scrolledChanged($event)"
      [ngClass]="{scrolled: isScrolled}">
-  <a routerLink="/pages/dashboard" class="al-logo clearfix"><span>Network-</span>admin</a>
+  <a routerLink="/pages/dashboard" class="al-logo clearfix">
+    <img src="/assets/11f104687c6dbee41bee11c5d47d4830.png" height="20" alt="pi360 Dashboard" class="nav-logo"><img src="/assets/ef6b01db45701e05d752f85ce16b6389.png" height="20" class="nav-logo">
+  </a>
   <a href (click)="toggleMenu()" class="collapse-menu-link ion-navicon"></a>
 
   <!--div class="search">
@@ -9,7 +11,7 @@
   </div-->
 
   <div class="user-profile clearfix">
-    <div class="dropdown al-user-profile">
+    <!--div class="dropdown al-user-profile">
       <a class="profile-toggle-link dropdown-toggle" id="user-profile-dd" data-toggle="dropdown" aria-expanded="false">
         <img src="{{ ( 'Nasta' | baProfilePicture ) }}">
       </a>
@@ -18,7 +20,7 @@
         <li class="dropdown-item"><a href><i class="fa fa-cog"></i>Settings</a></li>
         <li class="dropdown-item"><a href class="signout"><i class="fa fa-power-off"></i>Sign out</a></li>
       </ul>
-    </div>
-    <ba-msg-center></ba-msg-center>
+    </div-->
+    <!--ba-msg-center></ba-msg-center-->
   </div>
 </div>
